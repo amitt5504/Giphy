@@ -1,0 +1,1 @@
+$("#buttons-view").empty();

@@ -1,0 +1,82 @@
+body {
+    background-image: url("../images/floor.jpg");
+    background-attachment: fixed;
+}
+
+#buttons-view {
+    margin-top: 5px;
+    margin-bottom: 5px;
+    text-align: center;
+}
+
+.nba-player, #add-player {
+    margin-right: 3px;
+    margin-bottom: 1px;
+    background-color: black;
+    color: goldenrod;
+    border-color: white;
+}
+
+.nba-player:focus {
+    background-color: goldenrod;
+    color: white;
+    border-color: black;
+    outline: none;
+}
+
+.nba-player:hover, #add-player:hover {
+    background-color: goldenrod;
+    color: white;
+    border-color: black;
+}
+
+#add-player {
+    margin-top: 3px;
+}
+
+.player-img {
+    white-space: normal !important;
+    max-width: 100%;
+    overflow: auto;
+    display: inline-block;
+    margin-right: 5px;
+}
+
+h1 {
+    margin: 5px;
+    text-align: center;
+    color: black;
+    text-shadow: 2px 2px goldenrod;
+}
+
+#topic-form {
+    font-size: 15px;
+    font-weight: bolder;
+    color: white;  
+    outline-color: black;  
+}
+
+input[type=text] {
+    border: 2px solid black;
+    border-radius: 4px;
+}
+
+input[type=text]:focus {
+    border: 3px solid goldenrod;
+    outline: none;
+}
+
+.nba-player:focus, .nba-player:active, .nba-player.active, .nba-player:focus:active {
+    background-image: none;
+    background-color: goldenrod;
+    outline: none;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+}
+
+#add-player:focus, #add-player:active, #add-player.active, #add-player:focus:active {
+    background-image: none;
+    outline: none;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+}
