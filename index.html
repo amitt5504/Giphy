@@ -7,9 +7,10 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>A Day In the NBA</title>
 
+    <!-- jQuery CDN -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 
-
+    <!-- Bootstrap and Custom CSS linking -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
         integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" type="text/css" href="assets/css/style.css">
@@ -22,8 +23,9 @@
         <div class="row">
             <div class="col-md-1"></div>
             <div class="col-md-10">
+                <!-- Div that holds the buttons -->
                 <div id="buttons-view">
-                    <p>text</p>
+                    <p></p>
                 </div>
             </div>
             <div class="col-md-1"></div>
@@ -32,12 +34,14 @@
 
         <hr>
         <div class="row" id="gifs">
+            <!-- all gifs are displayed in this div. 10 images with 2 gifs on one line -->
             <div class="col-md-10" id="player-images">
                 
             </div>
             <div class="col-md-2">
                 <form id="topic-form">
                     <label for="player-input">Add NBA Player!</label>
+                    <!-- Size 15 is used to adjust the size of the input box -->
                     <input type="text" id="player-input" size="15">
                     <br>
 

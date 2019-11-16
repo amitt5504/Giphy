@@ -5,15 +5,17 @@ var nba = ["LeBron James", "Kobe Bryant", "Allen Iverson", "Stephen Curry",
     "Paul George", "James Harden", "Russell Westbrook", "Damian Lillard"
 ];
 
+//clears the buttons div on page load
 $("#buttons-view").empty();
 
 
-// displayMovieInfo function re-renders the HTML to display the appropriate content
+// getPlayerInfo function re-renders the HTML to display the appropriate content
 function getPlayerInfo() {
 
     var player = $(this).attr("data-name");
     var queryURL = "https://api.giphy.com/v1/gifs/search?q=" +
         player + "&api_key=BkaUZZWcFij6J7AoQj3WtPb1R2p9O6V9&limit=10";
+
     // Creates AJAX call for the specific movie button being clicked
     $.ajax({
         url: queryURL,
@@ -31,6 +33,7 @@ function getPlayerInfo() {
 
             var p = $("<p>").text("Rating: " + rating.toUpperCase());
 
+            //Image div is created with the urls of the still and animated gifs
             var playerImage = $("<img>");
             playerImage.attr("id", "image");
             playerImage.attr("src", results[i].images.fixed_width_still.url);
@@ -50,7 +53,7 @@ function getPlayerInfo() {
 
 }
 
-
+//On click for each gif. Grabs the state and changes to animated if still and vice versa
 $(document).on("click", "#image", function () {
 
     var state = $(this).attr("data-state");
@@ -71,7 +74,8 @@ $(document).on("click", "#image", function () {
 
 });
 
-function renderButtons() {
+//Function that creates the buttons for each of the NBA players
+function createButtons() {
     $("#buttons-view").empty();
 
     for (var i = 0; i < nba.length; i++) {
@@ -84,18 +88,19 @@ function renderButtons() {
     }
 }
 
+//on click function that updates the buttons when a new player is added
 $("#add-player").on("click", function (event) {
     event.preventDefault();
     var newPlayer = $("#player-input").val().trim();
     $("#player-input").val("");
     nba.push(newPlayer);
 
-    renderButtons();
+    createButtons();
 });
 
 
-
+//on click that begins calls the getPlayerInfo function when a player button is pushed
 $(document).on("click", ".nba-player", getPlayerInfo);
 
-// Calling the renderButtons function to display the intial buttons
-renderButtons();
+//function call creates the buttons on page load
+createButtons();

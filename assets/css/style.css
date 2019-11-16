@@ -1,3 +1,4 @@
+/* background of the page */
 body {
     background-image: url("../images/floor.jpg");
     background-attachment: fixed;
@@ -9,6 +10,7 @@ body {
     text-align: center;
 }
 
+/* Styling of the buttons */
 .nba-player, #add-player {
     margin-right: 3px;
     margin-bottom: 1px;
@@ -17,6 +19,7 @@ body {
     border-color: white;
 }
 
+/* Changes the button stlying when in focus */
 .nba-player:focus {
     background-color: goldenrod;
     color: white;
@@ -24,6 +27,7 @@ body {
     outline: none;
 }
 
+/* Changes the button styling when hovering */
 .nba-player:hover, #add-player:hover {
     background-color: goldenrod;
     color: white;
@@ -66,6 +70,7 @@ input[type=text]:focus {
     outline: none;
 }
 
+/* Changes the background when clicked on, removes the blue outline */
 .nba-player:focus, .nba-player:active, .nba-player.active, .nba-player:focus:active {
     background-image: none;
     background-color: goldenrod;
@@ -74,6 +79,7 @@ input[type=text]:focus {
     box-shadow: none;
 }
 
+/* Changes the background when clicked on, removes the blue outline */
 #add-player:focus, #add-player:active, #add-player.active, #add-player:focus:active {
     background-image: none;
     outline: none;
